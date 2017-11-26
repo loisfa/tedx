@@ -1,0 +1,15 @@
+<ion-view view-title="Nos partenaires" ng-controller='PartnersCtrl'>
+  <ion-content>
+    <ul>
+      <li ng-repeat='partner in partners'>
+        <div class="list">
+          <a class="item item-thumbnail-left" href="{{partner.url}}">
+            <img src="img/partners/{{partner.name}}.jpg">
+            <h2>{{partner.name}}</h2>
+            <p>{{partner.subtitle}}</p>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

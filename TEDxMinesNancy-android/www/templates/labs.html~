@@ -1,0 +1,42 @@
+<ion-view view-title="Labs">
+  <ion-content>
+    <div class="list" ng-controller="LabsCtrl">
+      <ul>
+        <li>
+          <div class="item item-divider"
+          style="text-align:center"
+          ng-style="{'background-image':'url(img/labs/banniere.jpg)'}">
+            <h3><font color='black'>
+              <br><br><br><br>
+            </font>
+          </h3>
+         </div>
+        </li>
+        <li>
+          <a class="item  item-icon-left item-icon-right" ui-sref="labsMap">
+            <i class="icon ion-map"></i>
+            <br>
+              Afficher le plan des Labs<br><br>
+            <i class="icon ion-chevron-right"></i>
+          </a>
+        </li>
+        <li>
+          <div class="item item-divider" style="text-align:center">
+            Liste des Labs
+          </div>
+        </li>
+        <li  ng-repeat="lab in labs">
+          <a class="item item-avatar" ng-click="setName(lab)" ui-sref="lab" >
+            <img src="img/labs/{{lab.name}}.jpg">
+            <span class="item-note royal">
+                <strong></br>
+                {{lab.room}}</strong>
+            </span>
+            <h2><strong>{{lab.name}}</strong></h2>
+            <p>{{lab.category}}</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

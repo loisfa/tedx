@@ -1,0 +1,26 @@
+<ion-view view-title="Accès">
+  <ion-content scroll="false"  ng-controller="MapCtrl">
+      <map on-create="mapCreated(map)"></map>
+      <!--<div> --> <!--  ng-init="init()"-->
+        <!--<div id="map" data-tap-disabled="true"></div>-->
+      <div class="list" ng-controller="AccessCtrl">
+      <ul>
+        <li>
+          <div class="item item-divider" style="text-align:center">
+            FAQ
+          </div>
+        </li>
+        <li ng-repeat="question in faq">
+          <button class="item item-icon-right button-block"
+          style="text-align:left" ng-click="setShowDiv(question)">
+              <font color='black'>{{question.question}}</font>
+            <i class="icon ion-chevron-{{question.arrowWay}}"></i>
+          </button>
+          <div class="padding"  ng-show="getShowDiv({{question.id}})">
+              <font color='#555555'>{{question.answer}}</font>
+          <div>
+        </li>
+      </ul>
+    <div>
+  </ion-content>
+</ion-view>

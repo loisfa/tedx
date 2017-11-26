@@ -1,0 +1,19 @@
+<ion-view ng-controller="LabCtrl" view-title="{{lab.name}}">
+  <ion-content>
+    <ul class="list">
+      <li>
+        <div class="padding">
+          <h4 ng-style="{color:'#666666'}">{{lab.category}}</h4>
+          <p>
+            {{lab.description}}
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src="img/labs/{{lab.name}}.jpg" style="width: 100%;"/>
+        </div>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

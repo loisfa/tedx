@@ -1,0 +1,15 @@
+<ion-view view-title="Nous suivre" ng-controller='FollowCtrl'>
+  <ion-content>
+    <ul>
+      <li ng-repeat='follow in follows'>
+        <div class="list">
+          <a class="item item-thumbnail-left" href="{{follow.url}}">
+            <img src="img/follow/{{follow.type}}.png">
+            <h2>{{follow.name}}</h2>
+            <p>{{follow.type}}</p>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

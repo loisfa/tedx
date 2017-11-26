@@ -1,0 +1,19 @@
+<ion-view view-title="Plan des Labs"  ng-controller="LabsMapCtrl">
+  <ion-content>
+  <p>
+    <div class="button-bar bar-assertive padding">
+      <a class="button" ng-click=displayFloor(0)>RDC</a>
+      <a class="button" ng-click=displayFloor(1)>1er</a>
+    </div>
+  <p>
+    <div ng-show="getShowMap(0)">
+      <img src="img/labs/rdc-salles.jpg" style="width: 100%;"/>
+    </div>
+    <div ng-show="getShowMap(1)">
+      <img src="img/labs/1er-salles.jpg" style="width: 100%;"/>
+    </div>
+    <div ng-show="getShowMap(2)">
+      <img src="img/labs/2e-salles.jpg" style="width: 100%;"/>
+    </div>
+   </ion-content>
+ </ion-view>

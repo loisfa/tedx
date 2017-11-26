@@ -1,0 +1,28 @@
+<ion-view view-title="Talks">
+  <ion-content>
+    <div class="list" ng-controller="TalksCtrl">
+      <ul>
+        <li>
+          <div class="item item-divider"
+          style="text-align:center"
+          ng-style="{'background-image':'url(img/speakers/banniere.jpg)'}">
+            <h3><font color='black'>
+              <br><br><br><br>
+            </font>
+          </h3>
+         </div>
+        </li>
+        <li ng-repeat="speaker in speakers">
+          <a class="item item-avatar" ng-click="setName(speaker)" ui-sref="speaker" >
+            <img src="img/speakers/{{speaker.name}}_{{speaker.surname}}.jpg">
+	    <span class="item-note royal">
+                <strong></br>{{lab.room}}</strong>
+            </span>
+            <h2>{{speaker.name}} <strong>{{speaker.surname}}</strong></h2>
+            <p>{{speaker.category}}</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>
